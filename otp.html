@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP</title>
+    <link
+      rel="icon"
+      href="https://lh3.googleusercontent.com/RllZf42XounX60rftJqa0K3EfoCMmzGqdOgbZvtQiPETcOVaes8cw1bEeBhW7UGeNb0=h200"
+      type="image/x-icon"
+    />
+    <style>
+      .otp {
+        width: 20%;
+        background-color: rgb(229, 229, 245);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        height: 30vh;
+        padding: 20px;
+      }
+      input {
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+      button {
+        background-color: red;
+        height: 40px;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="otp">
+      <label for="">enter otp here</label>
+      <input type="text" id="otp" />
+      <button id="pay">Pay Now</button>
+    </div>
+  </body>
+</html>
+<script>
+  document.getElementById("pay").addEventListener("click", checkotp);
+
+  function checkotp() {
+    var otp = document.getElementById("otp").value;
+    if (otp !== "1234") {
+      alert("pleaee fill correct otp");
+      return;
+    } else {
+      alert("thanks you will get your order in 3 to 4 days");
+      window.location.href = "index.html";
+      localStorage.removeItem("items");
+    }
+  }
+</script>

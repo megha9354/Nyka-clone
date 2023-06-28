@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>register</title>
+    <link
+      rel="icon"
+      href="https://lh3.googleusercontent.com/RllZf42XounX60rftJqa0K3EfoCMmzGqdOgbZvtQiPETcOVaes8cw1bEeBhW7UGeNb0=h200"
+      type="image/x-icon"
+    />
+    <style>
+      .mBox {
+        border: 1px solid #e1e1e1;
+        height: 545px;
+        width: 30%;
+        margin: auto;
+        margin-top: 50px;
+        border-radius: 15px;
+        background-color: #ffffff#fff;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      }
+      #reg {
+        border-bottom: 1px solid #e1e1e1;
+        color: #3f414d;
+        /* font-size: 16px; */
+        height: 20px;
+        width: 95%;
+        text-align: center;
+        margin: auto;
+        margin-top: 10px;
+        font-family: "Inter", sans-serif !important;
+        font-size: 15px;
+      }
+      #welc {
+        text-align: center;
+        margin: auto;
+        margin-top: 15px;
+        font-family: "Inter", sans-serif !important;
+        font-size: large;
+        color: #3f414d;
+        font: 300;
+      }
+      #reward {
+        text-align: center;
+        margin-top: 40px;
+        font-family: "Inter", sans-serif !important;
+        color: #3f414d;
+      }
+      .mscndBox {
+        border: 1px solid #f3f3f3;
+        height: 45px;
+        width: 85%;
+        margin: auto;
+        margin-top: 30px;
+        border-radius: 3px;
+        background-color: #f3f3f3;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: "Inter", sans-serif !important;
+      }
+      .mthirdBox {
+        /* border: 1px solid red; */
+        width: 80%;
+        height: 55px;
+        margin: auto;
+        margin-top: 35px;
+      }
+      #verify {
+        text-align: center;
+        font-family: "Inter", sans-serif !important;
+        font-size: medium;
+        color: #3f414d;
+      }
+      #otp {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #e02020;
+        /* margin: auto; */
+        height: 25px;
+        width: 55%;
+        margin-top: 40px;
+        margin-left: 38px;
+        font-family: "Inter", sans-serif !important;
+        color: gray;
+        font-size: medium;
+        font-weight: 350;
+      }
+      .mfourBox {
+        border: 1px #fc2779;
+        height: 55px;
+        width: 88%;
+        padding: auto;
+        margin: auto;
+        margin-top: 45px;
+        border-radius: 2px;
+        background-color: #fc2779;
+        font-family: "Inter", sans-serif !important;
+        font-weight: 700;
+        font-size: larger;
+        cursor: pointer;
+      }
+      #ver {
+        text-align: center;
+        color: white;
+        /* margin-top: 80px; */
+        padding-top: 15px;
+      }
+      .points {
+        color: #fc2779;
+      }
+      #valid {
+        width: 70px;
+        font-family: "Inter", sans-serif !important;
+        color: #e02020;
+        /* border: 1px solid black; */
+        font-size: smaller;
+        margin-left: 38px;
+        /* margin-top: -0.5px; */
+      }
+
+      .fstSub {
+        /* border: 1px solid red; */
+        margin-top: 10px;
+        margin-left: 15px;
+        height: 25px;
+        width: 7%;
+      }
+      .fstSub > img {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mBox">
+      <div class="fstBox">
+        <div id="mark" class="fstSub">
+          <img
+            src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ4zbiTgzGLSU4PzqJjKo3TKwUaEeh4ItVene0gBdoKg0weDSHc"
+            alt="matk"
+          />
+        </div>
+        <h4 id="reg">REGISTER</h4>
+      </div>
+      <p id="welc">Welcome to Nykaa!</p>
+      <p id="reward">
+        Register now and get <span class="points"> 2000 Reward Points!</span>
+      </p>
+      <div id="call" class="mscndBox"></div>
+      <div class="mthirdBox">
+        <p id="verify">
+          Please enter the OTP sent to verify your <br />
+          phone number
+        </p>
+      </div>
+      <input id="otp" placeholder="OTP" />
+      <p id="valid"></p>
+      <div id="verifyButton" class="mfourBox">
+        <p id="ver">V E R I F Y</p>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  var mobile = JSON.parse(localStorage.getItem("mobile-data")) || [];
+  // console.log(mobile[0])
+
+  document.getElementById("call").innerText = mobile[0];
+  var valid = document.getElementById("valid");
+
+  var verifyButton = document.getElementById("verifyButton");
+  verifyButton.addEventListener("click", verifyOTP);
+
+  var mark = document.getElementById("mark");
+  mark.addEventListener("click", decline);
+  function decline() {
+    window.location.href = "sign-in.html";
+  }
+
+  function verifyOTP() {
+    verifyButton.style.backgroundColor = "gray";
+    var otp = document.getElementById("otp").value;
+    // console.log(otp);
+    if (otp != "1234") {
+      valid.innerText = "invalid OTP";
+    } else {
+      window.location.href = "info.html";
+    }
+  }
+</script>

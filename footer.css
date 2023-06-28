@@ -1,0 +1,75 @@
+#contain {
+    background-color: rgb(63, 65, 77);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 22px;
+  }
+  #contain > div {
+    width: 20%;
+    font-size: 13px;
+    line-height: 20px;
+    word-spacing: 5px;
+  }
+  #contain img {
+    margin-top: -5px;
+    margin-right: 5px;
+    width: 10%;
+  }
+
+  #contain2 {
+    background-color: rgb(140, 141, 148);
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #contain2 > div {
+    color: white;
+    margin: 50px 0px 0px 40px;
+  }
+  #contain2 p {
+    margin-bottom: 12px;
+  }
+  #container3 {
+    display: flex;
+    justify-content: center;
+  }
+  .container3a {
+    display: flex;
+    justify-content: space-between;
+    padding: 19px;
+    width: 15%;
+    margin: 50px 0px;
+    font-size: 15px;
+  }
+  .container3a img {
+    margin-right: 15px;
+    margin-top: 15px;
+  }
+  .container3a p {
+    margin-bottom: -20px;
+  }
+  #container3a1 {
+    width: 12%;
+    padding: 20px;
+    margin: 50px 0px;
+    font-size: 11px;
+    text-align: center;
+  }
+  #container3a13 {
+    display: flex;
+    justify-content: space-around;
+  }
+  #container4 {
+    background-color: #fc2779;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+  }
+  #container4 div {
+    margin-right: 20px;
+  }
+  #punit {
+    display: flex;
+    margin-bottom: -10px;
+    justify-content: center;
+  }

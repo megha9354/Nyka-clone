@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>info</title>
+    <link
+      rel="icon"
+      href="https://lh3.googleusercontent.com/RllZf42XounX60rftJqa0K3EfoCMmzGqdOgbZvtQiPETcOVaes8cw1bEeBhW7UGeNb0=h200"
+      type="image/x-icon"
+    />
+  </head>
+
+  <style>
+    .mCont {
+      border: 1px solid #e1e1e1;
+      height: 545px;
+      width: 30%;
+      margin: auto;
+      margin-top: 50px;
+      border-radius: 15px;
+      background-color: #ffffff#fff;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+    #done {
+      border-bottom: 1px solid #e1e1e1;
+      color: #3f414d;
+      height: 30px;
+      width: 95%;
+      text-align: center;
+      margin: auto;
+      margin-top: 5px;
+      font-family: "Inter", sans-serif !important;
+      font-size: medium;
+    }
+    #mOne {
+      border: 1px solid #f3f3f3;
+      height: 45px;
+      width: 85%;
+      margin: auto;
+      margin-top: 30px;
+      border-radius: 3px;
+      background-color: #f3f3f3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: "Inter", sans-serif !important;
+    }
+    #mName,
+    #mAdd {
+      border: none;
+      border-bottom: 2px solid #e1e1e1;
+      margin-top: 50px;
+      margin-left: 15px;
+      height: 30px;
+      width: 92%;
+      color: #3f414d;
+      font-size: medium;
+      font-family: "Inter", sans-serif !important;
+    }
+    #mAdd {
+      margin-top: 38px;
+    }
+
+    #mName,
+    #mAdd:focus {
+      outline: 1px solid #e1e1e1;
+    }
+
+    #button {
+      border: 1px solid #f3f3f3;
+      height: 55px;
+      width: 88%;
+      padding: auto;
+      margin: auto;
+      margin-top: 80px;
+      border-radius: 2px;
+      background-color: gray;
+      font-family: "Inter", sans-serif !important;
+      font-weight: 700;
+      font-size: larger;
+    }
+    #save {
+      text-align: center;
+      color: white;
+      /* margin-top: 80px; */
+      padding-top: auto;
+    }
+    #error {
+      text-align: center;
+      font-family: "Inter", sans-serif !important;
+      margin: auto;
+      margin-top: 10px;
+      margin-right: 17px;
+      font-size: smaller;
+      /* font-weight: 600; */
+      font: 600;
+      color: #e02020;
+    }
+    .fstSub {
+      /* border: 1px solid red; */
+      margin-top: 10px;
+      margin-left: 15px;
+      height: 25px;
+      width: 7%;
+    }
+    .fstSub > img {
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <body>
+    <div class="mCont">
+      <div class="fstBox">
+        <div id="mark" class="fstSub">
+          <img
+            src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ4zbiTgzGLSU4PzqJjKo3TKwUaEeh4ItVene0gBdoKg0weDSHc"
+            alt="matk"
+          />
+        </div>
+        <h4 id="done">ALMOST THERE!</h4>
+      </div>
+      <div id="mOne"></div>
+      <input id="mName" placeholder="Full Name" type="text" />
+      <input id="mAdd" placeholder="Email Address" type="email" />
+      <p id="error"></p>
+      <div id="button" class="lastdiv">
+        <p id="save">SAVE</p>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  var mobile = JSON.parse(localStorage.getItem("mobile-data")) || [];
+  var userdata = JSON.parse(localStorage.getItem("user-data")) || [];
+
+  document.getElementById("mOne").innerText = mobile[0];
+  var error = document.getElementById("error");
+  var button = document.getElementById("button");
+  button.addEventListener("click", doneTask);
+
+  var a = document.getElementById("mName");
+  a.addEventListener("change", check);
+
+  var b = document.getElementById("mAdd");
+  b.addEventListener("change", check);
+
+  var mark = document.getElementById("mark");
+  mark.addEventListener("click", decline);
+  function decline() {
+    window.location.href = "register.html";
+  }
+
+  function check() {
+    var Name = document.getElementById("mName").value;
+    var Address = document.getElementById("mAdd").value;
+    //   console.log("Megha", "megha")
+    if (Name != "" && Address != "") {
+      button.style.backgroundColor = "#fc2779";
+    }
+    // else{
+    //     error.innerText = "Please enter require Details"
+    // }
+  }
+  function doneTask() {
+    button.style.backgroundColor = "gray";
+    var Name = document.getElementById("mName").value;
+    var Address = document.getElementById("mAdd").value;
+    var value = true;
+
+    var object = {
+      name: Name,
+      email: Address,
+      mobile: mobile[0],
+      value: value,
+    };
+    if (Name != "" && Address != "") {
+      userdata.push(object);
+      localStorage.setItem("user-data", JSON.stringify(userdata));
+      window.location.href = "index.html";
+      localStorage.setItem("loggedin", "true");
+    } else {
+      error.innerText = "Please enter require Details";
+    }
+  }
+</script>

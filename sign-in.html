@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link
+      rel="icon"
+      href="https://lh3.googleusercontent.com/RllZf42XounX60rftJqa0K3EfoCMmzGqdOgbZvtQiPETcOVaes8cw1bEeBhW7UGeNb0=h200"
+      type="image/x-icon"
+    />
+    <style>
+      .mContainer {
+        border: 1px solid #e1e1e1;
+        height: 538px;
+        width: 30%;
+        margin: auto;
+        margin-top: 50px;
+        border-radius: 20px;
+        background-color: #ffffff#fff;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      }
+      #login {
+        border-bottom: 1px solid #e1e1e1;
+        color: #3f414d;
+        font-size: 16px;
+        height: 25px;
+        width: 95%;
+        text-align: center;
+        margin: auto;
+        margin-top: 18px;
+        font-family: "Inter", sans-serif !important;
+      }
+      .mfstdDiv {
+        border: 0.5px solid#e02020;
+        background-color: #f3f3f3;
+        font-family: "Inter", sans-serif !important;
+        text-align: center;
+        height: 40px;
+        width: 80%;
+        padding: auto;
+        margin-left: 35px;
+        margin-top: 25px;
+        border-radius: 2px;
+      }
+      .mfstdDiv:focus {
+        /* border: 1px solid#e02020; */
+        outline: 1px solid #e02020;
+      }
+      #mEmail {
+        /* border: 1px solid green; */
+        margin: auto;
+        margin-top: 11px;
+        font-size: medium;
+        color: gray;
+      }
+      #req {
+        font-size: x-small;
+        font-weight: 600;
+        font-family: "Inter", sans-serif !important;
+        color: #3f414d;
+        font: 600;
+        text-align: end;
+        margin-right: 27px;
+      }
+      .mscndDiv {
+        border: 1px #fc2779;
+        height: 55px;
+        width: 88%;
+        padding: auto;
+        margin: auto;
+        margin-top: 155px;
+        border-radius: 2px;
+        background-color: #fc2779;
+        font-family: "Inter", sans-serif !important;
+        font-weight: 700;
+        font-size: larger;
+      }
+      #proceed {
+        /* border: 2px solid black; */
+        text-align: center;
+        color: white;
+        /* margin-top: 80px; */
+        padding-top: 15px;
+        cursor: pointer;
+      }
+      .fstSub {
+        /* border: 1px solid red; */
+        margin-top: 10px;
+        margin-left: 15px;
+        height: 25px;
+        width: 7%;
+      }
+      .fstSub > a > img {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mContainer">
+      <div class="fstBox">
+        <div class="fstSub">
+          <a href="index.html">
+            <img
+              src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ4zbiTgzGLSU4PzqJjKo3TKwUaEeh4ItVene0gBdoKg0weDSHc"
+              alt="matk"
+            />
+          </a>
+        </div>
+        <h4 id="login">LOGIN / REGISTER</h4>
+      </div>
+
+      <input
+        id="mobile"
+        class="mfstdDiv"
+        type="number"
+        placeholder="Enter your Phone Number"
+        maxlength="10"
+        pattern="\d{10}"
+        required
+      />
+      <p id="req">REQUIRED</p>
+      <div id="button" class="mscndDiv">
+        <p id="proceed">P R O C E E D</p>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  // user-data
+  var arr = JSON.parse(localStorage.getItem("user-data")) || [];
+
+  // console.log(arr);
+  var button = document.getElementById("button");
+  button.addEventListener("click", proceed);
+  var error = document.getElementById("req");
+  var mobileArr = [];
+  var check = false;
+
+  function proceed() {
+    button.style.backgroundColor = "gray";
+    var mobile = document.getElementById("mobile").value;
+    // console.log(typeof mobile)
+    if (mobile.length < 10 || mobile.length > 10) {
+      error.innerText = "Enter a valid Number";
+    } else {
+      button.style.backgroundColor = "#fc2779";
+      mobileArr.push(mobile);
+      // console.log(arr);
+      localStorage.setItem("mobile-data", JSON.stringify(mobileArr));
+      mobileArr = [];
+      //   window.location.href = "register.html";
+
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i].mobile == mobile) {
+          check = true;
+          break;
+        }
+      }
+      if (check) {
+        window.location.href = "login.html";
+      } else {
+        window.location.href = "register.html";
+      }
+    }
+  }
+</script>

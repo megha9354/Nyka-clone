@@ -1,0 +1,190 @@
+/* navbar  */
+*{
+    margin: 0;
+    padding: 0;
+}
+#nav{
+    display: flex;
+    gap: 13%;
+    
+    padding: 17px;
+    border-bottom: 1px solid gray;
+}
+#img{
+
+margin-left:4% ;
+}
+#singup ,#addres_nav ,#payment{
+    display: flex;
+    width: 9%;
+    justify-content: space-between;
+    align-items: center;
+}
+#singup>div ,#addres_nav >div,#payment >div {
+ background-color: rgba(255, 0, 0, 0.806);
+ width: 30px;
+ height: 30px;
+ text-align: center;
+border-radius:50% ;
+color: white;
+}
+ .fa-check ,.fa-pencil{
+    position: relative;
+    top: 6px;
+}
+
+
+/* payment */
+#payment_board {
+    width: 50%;
+    margin-left: 15%;
+ 
+    height: 85vh;
+    margin-top: 30px;
+   
+}
+#Choose{
+
+margin-top: 30px;
+
+}
+#select-way{
+ 
+    
+    
+    margin-top: 10px;
+    padding:10px;
+    display: flex;
+    justify-content: space-between;
+   
+}
+#choose-way{
+   
+    padding: 20px 10px;
+    margin-right: 10px;
+}
+.card-way{
+ height: 50px;
+padding: 15px 25px;
+background-color: #fff;
+
+}
+.upi-way{
+    height: 50px;
+padding: 15px 25px;
+
+background-color:rgb(220, 220, 220);
+}
+
+.cards-box{
+    width: 55%;
+}
+.card >div{
+    display: flex;
+    
+    justify-content: space-between;
+}
+input{
+    width: 100%;
+    height: 40px;
+    margin-top:10px ;
+    border: 1px solid gray;
+    border-radius: 7px;
+}
+.card >div >input{
+    width: 45%;
+
+}
+.card{
+    
+    margin-right: 10px;
+    box-shadow: 0px 0px 10px 3px #ccc ;
+    padding: 10px;
+    border-radius: 5px;
+}
+.card >button{
+    width: 100%;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(167, 103, 103);
+    border: none;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+#card h3{
+margin-bottom: 10px;
+}
+.img1{
+    /* background-color: #e11c1c; */
+    text-align: center;
+    width: 60%;
+    height: 54%;
+ 
+ border-radius: 50%;
+ margin-top: 10px;
+margin-bottom: 2px;
+}
+
+.img2{
+    
+    text-align: center;
+    width: 78%;
+    height: 53%;
+ 
+ border-radius: 50%;
+ margin-top: 10px;
+margin-bottom: 2px;
+}
+.img3{
+    background-color: #ffffff;
+    text-align: center;
+    width: 89%;
+    height: 53%;
+ 
+ border-radius: 50%;
+ margin-top: 10px;
+margin-bottom: 2px;
+ 
+}
+.img4{
+    background-color: #ffffff;
+    text-align: center;
+    width: 65%;
+    height: 53%;
+ 
+ border-radius: 50%;
+ margin-top: 10px;
+margin-bottom: 2px;
+ 
+}
+.img11{
+    border: 2px solid rgb(245, 134, 134);
+}
+
+.img21{
+    border: 2px solid rgb(245, 134, 134);
+}
+.img31{
+    border: 2px solid rgb(245, 134, 134);
+}
+.img41{
+    border: 2px solid rgb(245, 134, 134);
+}
+.card2{
+    display: none;
+}
+.card-way1{
+background-color: rgb(220, 220, 220);
+}
+.card11{
+    display: none;
+}
+.upy-way1{
+    background-color: #ffffff;
+}
+.card22{
+    display: inline-block;
+}
+ 

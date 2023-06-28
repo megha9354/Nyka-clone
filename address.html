@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>address</title>
+    <link
+      rel="icon"
+      href="https://lh3.googleusercontent.com/RllZf42XounX60rftJqa0K3EfoCMmzGqdOgbZvtQiPETcOVaes8cw1bEeBhW7UGeNb0=h200"
+      type="image/x-icon"
+    />
+    <style></style>
+    <link rel="stylesheet" href="address.css" />
+    <script
+      src="https://kit.fontawesome.com/eed82eddcd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="nav">
+      <div id="img">
+        <a href="index.html"
+          ><img
+            src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/nykaa-logo.svg"
+            alt=""
+        /></a>
+      </div>
+      <div id="singup">
+        <div>
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h3>sign up</h3>
+      </div>
+
+      <div id="addres_nav">
+        <div>
+          <i class="fa-solid fa-pencil"></i>
+        </div>
+        <h3>Address</h3>
+      </div>
+
+      <div id="payment">
+        <div>
+          <p>3</p>
+        </div>
+        <h3>Payment</h3>
+      </div>
+    </div>
+    <div style="display: flex">
+      <div id="container">
+        <h1>Choose address</h1>
+        <p>
+          Detailed address will help our delivery partner reach your doorstep
+          quickly
+        </p>
+
+        <div id="addres">
+          <div id="icon">
+            <i class="fa-solid fa-plus" style="color: #fd0814"></i>
+          </div>
+          <h3>Add New Address</h3>
+        </div>
+        <div class="addreses"></div>
+      </div>
+      <div class="overlay"></div>
+      <div class="new-address">
+        <div class="top-part">
+          <div class="close">&times;</div>
+          <h3>New Address</h3>
+        </div>
+        <div class="middle-part">
+          <div>
+            <h2>Address</h2>
+            <input id="pin" type="number" placeholder="pincode" />
+            <input id="house" type="text" placeholder="House/Flat/office No." />
+            <input id="area" type="text" placeholder="Road Name/Area/Colony" />
+          </div>
+          <div>
+            <h2>Contact</h2>
+            <p>
+              Information provided here will be used to contact you for delivery
+              updates
+            </p>
+            <input id="name" type="text" placeholder="Name" />
+            <input id="number" type="text" minlength="10" placeholder="Phone" />
+            <input id="email" type="email" placeholder="email" />
+          </div>
+        </div>
+        <div class="bottom-part">
+          <button id="ship_address">Ship to this Address</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="address.js"></script>

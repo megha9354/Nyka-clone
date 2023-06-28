@@ -1,0 +1,97 @@
+   /* navbar */
+   *{
+    margin: 0;
+    padding: 0;
+}
+#nav{
+    display: flex;
+    gap: 13%;
+    
+    padding: 17px;
+    border-bottom: 1px solid gray;
+}
+#img{
+
+margin-left:4% ;
+}
+#singup ,#addres ,#payment{
+    display: flex;
+    
+    width: 9%;
+    justify-content: space-between;
+    align-items: center;
+}
+#singup >div{
+ background-color: rgba(255, 0, 0, 0.806);
+ width: 30px;
+ height: 30px;
+ text-align: center;
+border-radius:50% ;
+color: white;
+}
+i{
+    position: relative;
+    top: 6px;
+}
+#addres >div ,#payment >div{
+    background-color:rgba(122, 114, 114, 0.84);
+ width: 30px;
+ height: 30px;
+ text-align: center;
+border-radius:50% ;
+color: white;
+align-items: center;
+}
+#addres p , #payment p{
+    margin-top: 5px;
+}
+
+
+/* usser box  */
+#user-box{
+   
+    width: 70%;
+    padding: 30px;
+    margin: auto;
+    margin-top: 15px;
+}
+#user-box >div{
+    display: flex;
+    gap: 20px;
+    margin-top: 8%;
+}
+#user-box >div >div{
+ 
+ width: 23%;
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+ border-radius: 10px;
+}
+img{
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+#user-box >div >div >div{
+    padding: 15px;
+    margin-top: -6px;
+    
+}
+button{
+    width: 100%;
+    margin-top:15px ;
+    padding: 15px;
+    background: transparent;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: red;
+    font-weight: 700;
+    font-size: 15px;
+}
+#exception button{
+    background-color: rgb(247, 138, 160);
+    color: white;
+}
+h1+p{
+    color: gray;
+    margin-top: 10px;
+}

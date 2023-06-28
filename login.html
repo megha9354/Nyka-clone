@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link
+      rel="icon"
+      href="https://lh3.googleusercontent.com/RllZf42XounX60rftJqa0K3EfoCMmzGqdOgbZvtQiPETcOVaes8cw1bEeBhW7UGeNb0=h200"
+      type="image/x-icon"
+    />
+  </head>
+  <style>
+    .mainBox {
+      border: 1px solid #e1e1e1;
+      height: 545px;
+      width: 30%;
+      margin: auto;
+      margin-top: 45px;
+      border-radius: 20px;
+      background-color: #ffffff#fff;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+    .fstBox {
+      border-bottom: 1px solid #e1e1e1;
+      height: 33px;
+      width: 95%;
+      margin: auto;
+      margin-top: 25px;
+    }
+    .fstSub {
+      /* border: 1px solid red; */
+      height: 25px;
+      width: 7%;
+    }
+    .fstSub > img {
+      height: 100%;
+      width: 100%;
+    }
+    #log {
+      /* border: 1px solid blue; */
+      height: 25px;
+      width: 60%;
+      margin: auto;
+      margin-top: -28px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: "Inter", sans-serif !important;
+    }
+    .scndSub {
+      /* border: 1px solid red; */
+      height: 90px;
+      text-align: center;
+      margin: auto;
+      margin-top: 35px;
+      width: 70%;
+      font-family: "Inter", sans-serif !important;
+      color: #3f414d;
+      font-size: medium;
+    }
+    #otp {
+      border: none;
+      outline: none;
+      border-bottom: 1px solid #e02020;
+      /* margin: auto; */
+      height: 25px;
+      width: 55%;
+      margin-top: 55px;
+      margin-left: 38px;
+      font-family: "Inter", sans-serif !important;
+      color: gray;
+      font-size: medium;
+      font-weight: 350;
+    }
+    .thirdSub {
+      border: 1px #fc2779;
+      height: 55px;
+      width: 88%;
+      padding: auto;
+      margin: auto;
+      margin-top: 55px;
+      border-radius: 2px;
+      background-color: #fc2779;
+      font-family: "Inter", sans-serif !important;
+      font-weight: 700;
+      font-size: larger;
+      cursor: pointer;
+    }
+    #ver {
+      text-align: center;
+      color: white;
+      /* margin-top: 80px; */
+      padding-top: 15px;
+    }
+    #pass {
+      /* border: 1px solid black; */
+      width: 50%;
+      margin: auto;
+      margin-top: 28px;
+      font-size: larger;
+      cursor: pointer;
+      font-family: "Inter", sans-serif !important;
+      font-weight: 550;
+      color: gray;
+    }
+    #valid {
+      width: 70px;
+      font-family: "Inter", sans-serif !important;
+      color: #e02020;
+      /* border: 1px solid black; */
+      font-size: smaller;
+      margin-left: 38px;
+      /* margin-top: -0.5px; */
+    }
+  </style>
+  <body>
+    <div class="mainBox">
+      <div class="fstBox">
+        <div id="mark" class="fstSub">
+          <img
+            src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ4zbiTgzGLSU4PzqJjKo3TKwUaEeh4ItVene0gBdoKg0weDSHc"
+            alt="matk"
+          />
+        </div>
+        <div id="log">LOGIN</div>
+      </div>
+      <div class="scndSub">
+        Welcome back <b id="showName"></b> <br />
+        Please enter the OTP sent on your Phone <br />(Be sure to check your
+        spam folder)
+      </div>
+      <input id="otp" placeholder="OTP" />
+      <p id="valid"></p>
+      <div id="verifyButton" class="thirdSub">
+        <p id="ver">V E R I F Y</p>
+      </div>
+      <!-- <div id="pass">Login via Password</div> -->
+    </div>
+  </body>
+</html>
+
+<script>
+  var arr = JSON.parse(localStorage.getItem("user-data")) || [];
+  var mobileArr = JSON.parse(localStorage.getItem("mobile-data")) || [];
+  var showName = document.getElementById("showName");
+
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i].mobile == mobileArr[0]) {
+      showName.innerText = arr[i].name;
+      break;
+    }
+  }
+
+  var valid = document.getElementById("valid");
+  var mark = document.getElementById("mark");
+  mark.addEventListener("click", decline);
+  function decline() {
+    window.location.href = "sign-in.html";
+  }
+
+  var verifyButton = document.getElementById("verifyButton");
+  verifyButton.addEventListener("click", verifyOTP);
+
+  function verifyOTP() {
+    verifyButton.style.backgroundColor = "gray";
+    var otp = document.getElementById("otp").value;
+    // console.log(otp);
+    if (otp != "1234") {
+      valid.innerText = "invalid OTP";
+    } else {
+      window.location.href = "index.html";
+    }
+  }
+</script>

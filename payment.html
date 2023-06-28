@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+    <link
+      rel="icon"
+      href="https://lh3.googleusercontent.com/RllZf42XounX60rftJqa0K3EfoCMmzGqdOgbZvtQiPETcOVaes8cw1bEeBhW7UGeNb0=h200"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="payment.css" />
+    <script
+      src="https://kit.fontawesome.com/eed82eddcd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="nav">
+      <div id="img">
+        <a href="index.html"
+          ><img
+            src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/nykaa-logo.svg"
+            alt=""
+        /></a>
+      </div>
+      <div id="singup">
+        <div>
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h3>sign up</h3>
+      </div>
+
+      <div id="addres_nav">
+        <div>
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h3>Address</h3>
+      </div>
+
+      <div id="payment">
+        <div>
+          <i class="fa-solid fa-pencil"></i>
+        </div>
+        <h3>Payment</h3>
+      </div>
+    </div>
+
+    <div id="payment_board">
+      <h1>Choose payment method</h1>
+      <p>Choose the payment method you prefer</p>
+      <div id="Choose">
+        <h2>payment mothods</h2>
+        <div id="select-way">
+          <div id="choose-way">
+            <div class="card-way">
+              <h4>Credit/Debit Card</h4>
+              <p>Visa, Mastercard, Rupay & more</p>
+            </div>
+
+            <div class="upi-way">
+              <h4>UPI</h4>
+              <p>Google Pay, PhonePe, Paytm & more</p>
+            </div>
+          </div>
+          <div class="cards-box">
+            <div class="card card1">
+              <h3>One card for all Nykaa apps</h3>
+              <hr />
+              <input type="text" id="card-number" placeholder="Card-Number" />
+              <div>
+                <input
+                  type="text"
+                  id="card-expiry"
+                  placeholder="Expiry(MM/YY)"
+                />
+                <input type="text" id="cvv" placeholder="CVV" />
+              </div>
+              <button class="paynow">Pay Now</button>
+            </div>
+            <div class="card card2">
+              <h3>Pay With UPI</h3>
+              <hr />
+              <p>1. Select UPI App</p>
+              <div id="select-app">
+                <div>
+                  <div class="img1">
+                    <img
+                      src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/fashion_icons/googlePay.svg"
+                      alt=""
+                    />
+                  </div>
+                  <p>Google Pay</p>
+                </div>
+                <div>
+                  <div class="img2">
+                    <img
+                      src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/UPImWeb/PhonePe.svg"
+                      alt=""
+                    />
+                  </div>
+                  <p>PhonePe</p>
+                </div>
+                <div>
+                  <div class="img3">
+                    <img
+                      src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/UPImWeb/Paytm.svg"
+                      alt=""
+                    />
+                  </div>
+                  <p>Paytm</p>
+                </div>
+                <div>
+                  <div class="img4">
+                    <img
+                      src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/UPImWeb/UPI-Logo-vector%201.svg"
+                      alt=""
+                    />
+                  </div>
+                  <p>Other UPI</p>
+                </div>
+              </div>
+              <input type="text" id="upinum" placeholder="Enter UPI Id" />
+
+              <button class="paynow1">Pay Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="payment.js"></script>

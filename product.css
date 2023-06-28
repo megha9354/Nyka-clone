@@ -1,0 +1,140 @@
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+#maindiv {
+  display: flex;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+}
+#container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 110px;
+  margin-right: 125px;
+  gap: 20px;
+}
+#container > div {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin: 20px;
+}
+#container > div > img {
+  margin-left: 30px;
+}
+#container > div > h5 {
+  text-align: center;
+}
+#container > div > p {
+  text-align: center;
+}
+
+@media all and(min-width: 421px) and (max-width: 780px) {
+  #container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#container > div > button {
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  width: 200px;
+  background-color: palevioletred;
+  color: white;
+  font-weight: bolder;
+  margin-left: 35px;
+  margin-right: 20px;
+}
+#container > div:hover {
+  cursor: pointer;
+}
+#container > div > button:hover {
+  cursor: pointer;
+}
+select {
+  border: none;
+  width: 200px;
+  height: 50px;
+  margin-left: 20px;
+  background-color: white;
+  font-weight: bold;
+  vertical-align: bottom;
+}
+#container1 {
+  background-color: rgb(63, 65, 77);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 22px;
+}
+#container1 > div {
+  width: 20%;
+  font-size: 13px;
+  line-height: 20px;
+  word-spacing: 5px;
+}
+#container1 img {
+  margin-top: -5px;
+  margin-right: 5px;
+  width: 10%;
+}
+
+#container2 {
+  background-color: rgb(140, 141, 148);
+  display: flex;
+  justify-content: space-evenly;
+}
+#container2 > div {
+  color: white;
+  margin: 50px 0px 0px 40px;
+}
+#container2 p {
+  margin-bottom: 12px;
+}
+#container3 {
+  display: flex;
+  justify-content: center;
+}
+.container3a {
+  display: flex;
+  justify-content: space-between;
+  padding: 19px;
+  width: 15%;
+  margin: 50px 0px;
+  font-size: 15px;
+}
+.container3a img {
+  margin-right: 15px;
+  margin-top: 15px;
+}
+.container3a p {
+  margin-bottom: -20px;
+}
+#container3a1 {
+  width: 12%;
+  padding: 20px;
+  margin: 50px 0px;
+  font-size: 11px;
+  text-align: center;
+}
+#container3a13 {
+  display: flex;
+  justify-content: space-around;
+}
+#container4 {
+  background-color: #fc2779;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  padding: 5px;
+}
+#container4 div {
+  margin-right: 20px;
+}
+#punit {
+  display: flex;
+  margin-bottom: -10px;
+  justify-content: center;
+}
